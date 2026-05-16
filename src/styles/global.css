@@ -695,10 +695,15 @@ html.dark .content_main img {
 
 @media (max-width: 480px) {
 
-    .item-p{
-        justify-items: center;
-        gap: 1px;
-    }
+  .item_filtros_todos,
+  .item_filtros_concluido,
+  .item_filtros_pendente{
+    padding: 0;
+  }
+
+  .container_list{
+    max-width: 480px;
+  }
   .login-box {
     width: 90%;
     padding: 24px;
