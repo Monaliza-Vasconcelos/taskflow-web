@@ -1,80 +1,143 @@
-### 📌 TaskFlow Frontend
+# 🗂️ TaskFlow
 
-Interface web do sistema TaskFlow, uma aplicação de gerenciamento de tarefas.
-Construído com React, este frontend consome uma API REST desenvolvida em Django + Django REST Framework, utilizando autenticação via JWT.
-
-### 🚀 Funcionalidades
-  🔐 Login e autenticação com JWT
-  👤 Controle de usuário autenticado
-  📋 Listagem de tarefas
-  ➕ Criação de tarefas
-  ✏️ Edição de tarefas
-  ❌ Remoção de tarefas
-  📊 Organização de tarefas por status
-  🌐 Consumo de API REST
+Um sistema de gerenciamento de tarefas (To-Do List) com autenticação JWT, desenvolvido com **React + Django REST Framework**.
 
 ---
 
-### 🧱 Tecnologias
+## ✨ Demonstração
 
-React
-JavaScript (ou TypeScript se usar)
-Axios
-React Router DOM
-Context API (ou Redux, se usar)
-JWT Authentication
+🔗 Frontend: https://taskflow-web-mauve.vercel.app  
+🔗 Backend API: https://web-production-564941.up.railway.app  
 
 ---
 
-### ⚙️ Instalação e execução
+## 📸 Preview
+
+![TaskFlow Preview](./preview.png)
+
+---
+
+## 🚀 Funcionalidades
+
+- 🔐 Login com JWT (access + refresh token)
+- 📋 Criar tarefas
+- ✏️ Editar tarefas
+- ❌ Excluir tarefas
+- ✅ Marcar como concluída
+- 🔎 Filtro de status (pendente / concluído)
+- 🌐 API integrada com backend Django
+- 📱 Layout responsivo
+
+---
+
+## 🛠️ Tecnologias
+---
+### Frontend
+- React
+- Vite
+- PrimeReact
+- Axios
+- CSS puro (custom)
+
+### Backend
+- Django
+- Django REST Framework
+- SimpleJWT
+- CORS Headers
+- PostgreSQL (Railway)
+
+---
+
+## ⚙️ Instalação local
+---
+### 📦 Frontend
+
 ```bash
-# clonar o repositório
-git clone git@github.com:Monaliza-Vasconcelos/taskflow-web.git
-
-# entrar na pasta
+git clone https://github.com/seu-usuario/taskflow-frontend.git
 cd taskflow-frontend
-
-# instalar dependências
 npm install
-
-# rodar o projeto
 npm run dev
 ```
-
 ---
 
-### 🔌 Configuração da API
-Crie um arquivo .env na raiz do projeto:
+### 🔧 Variáveis de ambiente
+
+Crie um arquivo .env:
 ```bash
-VITE_API_URL=http://localhost:8000
-```
-Ou no deploy:
-```bash
-VITE_API_URL=https://seu-backend.up.railway.app
+VITE_API_URL=https://web-production-564941.up.railway.app
 ```
 
 ---
 
+### 🖥️ Backend
+
+```bash
+git clone https://github.com/seu-usuario/taskflow-backend.git
+cd taskflow-backend
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+---
 ### 🔐 Autenticação
-O sistema utiliza JWT:
-/api/token/ → login
-access token → requisições
-refresh token → renovação automática
+
+O sistema usa JWT:
+
+access token → autenticação das requisições
+refresh token → renovação de sessão
+
+Endpoint:
+POST /api/token/
+
 
 ---
 
-### 🌍 Backend
+### 📡 Endpoints principais
 
-Este frontend consome a API:
+```bash
+| Método | Endpoint        | Descrição        |
+| ------ | --------------- | ---------------- |
+| POST   | /api/token/     | Login            |
+| GET    | /api/tasks/     | Listar tarefas   |
+| POST   | /api/tasks/     | Criar tarefa     |
+| PATCH  | /api/tasks/:id/ | Atualizar tarefa |
+| DELETE | /api/tasks/:id/ | Remover tarefa   |
+```
 
-👉 TaskFlow API (Django REST Framework)
 
-### 📌 Objetivo
+---
+### 🧠 Aprendizados
 
-Criar um sistema completo de produtividade com autenticação, gerenciamento de tarefas e interface moderna.
+Este projeto me ajudou a entender:
+
+Autenticação JWT
+Consumo de API REST
+Deploy com Vercel e Railway
+Integração frontend + backend
+Controle de estado no React
 
 ---
 
-### 🧠 Autor
+### 🚀 Deploy
+Frontend: Vercel
+Backend: Railway
 
-Desenvolvido por Monaliza Vasconcelos
+---
+
+### 📌 Melhorias futuras
+ Dark mode toggle
+
+ Drag and drop de tarefas
+
+ Perfis de usuário
+
+ Reset de senha
+
+ Notificações
+
+ ---
+ 
+ ### 👨‍💻 Autor
+ Feito por Monaliza Vasconcelos
+
