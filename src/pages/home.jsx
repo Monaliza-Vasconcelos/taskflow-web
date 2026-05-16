@@ -5,10 +5,11 @@ import Item from "../components/tasks/TasksItem";
 import List from "../components/tasks/TaksList";
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Dialog } from "primereact/dialog";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
-import "../styles/global.css"
+import "../styles/global.css";
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -18,13 +19,22 @@ export default function Home() {
   const [editingTask, setEditingTask] = useState(null);
   const [filterStatus, setFilterStatus] = useState([]);
 
+  const navigate = useNavigate();
+
   const statusOptions = [
     { name: "Pendente", code: false },
     { name: "Concluído", code: true },
   ];
 
+  // 🔥 PROTEÇÃO DE ROTA (resolve seu problema do login)
+  useEffect(() => {
+    const token = localStorage.getItem("access");
 
- console.log(API)
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
+
   // GET
   const fetchTasks = async () => {
     const response = await fetch(`${API}/api/tasks/`, {
@@ -37,12 +47,13 @@ export default function Home() {
     setTasks(data);
   };
 
+  // 🔥 CARREGA TAREFAS SEM BUG
   useEffect(() => {
-    function fec(){
+    function fech(){
         fetchTasks();
     }
 
-    fec()
+    fech()
   }, []);
 
   // TOGGLE
