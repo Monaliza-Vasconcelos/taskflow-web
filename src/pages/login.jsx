@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
@@ -7,6 +7,15 @@ export default function Login() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // 🔥 SE JÁ ESTIVER LOGADO → SAI DO LOGIN
+  useEffect(() => {
+    const token = localStorage.getItem("access");
+
+    if (token) {
+      navigate("/");
+    }
+  }, []);
 
   async function handleLogin(e) {
     e.preventDefault();
@@ -21,28 +30,31 @@ export default function Login() {
       localStorage.setItem("refresh", res.data.refresh);
 
       navigate("/");
-    } catch (err) {
-      console.log(err);
-      alert("Erro login");
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+      alert("Login inválido");
     }
   }
 
   return (
-    <form onSubmit={handleLogin}>
-      <input
-        placeholder="usuário"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
+    <div className="container_login">
+      <form onSubmit={handleLogin} className="login-box">
+        <input
+          placeholder="Usuário"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
 
-      <input
-        placeholder="senha"
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+        <input
+          placeholder="Senha"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-      <button type="submit">Entrar</button>
-    </form>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
   );
 }

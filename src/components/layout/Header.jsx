@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import prancheta from "../../assets/prancheta.svg";
 import { Sun, Moon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [theme, setTheme] = useState(() => {
@@ -17,6 +18,15 @@ function Header() {
 
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    localStorage.removeItem("access");
+    localStorage.removeItem("refresh");
+
+    navigate("/login");
+  }
   return (
     <>
       <header className="header_container">
@@ -41,7 +51,9 @@ function Header() {
               </div>
             )}
           </button>
+          <button onClick={handleLogout} className="button_sair">Sair</button>
         </div>
+        
       </header>
     </>
   );

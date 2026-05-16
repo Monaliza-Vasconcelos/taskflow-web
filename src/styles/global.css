@@ -144,9 +144,16 @@ body {
 /*ÍCONE E BOTÃO MODO*/
 .container_button{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
 }
 
+.button_sair{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
 .theme_toggle_button{
     display: flex;
     align-items: center;
@@ -685,5 +692,72 @@ html.dark .content_main img {
   }
 }
 
+
+@media (max-width: 480px) {
+  .form_container{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .label_input,
+  .label_input.description,
+  .label_input.status,
+  .label_input.title{
+    width: 100%;
+  }
+
+  .item_filtros{
+    flex-direction: column;
+    gap:20px;
+  }
+}
+
+
+
+.container_login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: Arial, sans-serif;
+}
+
+.login-box {
+  background: #111827;
+  padding: 40px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  color: white;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #1f2937;
+  color: white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-box button:hover {
+  background: #2563eb;
+}
 
 
