@@ -694,6 +694,11 @@ html.dark .content_main img {
 
 
 @media (max-width: 480px) {
+
+    .item-p{
+        justify-items: center;
+        gap: 1px;
+    }
   .login-box {
     width: 90%;
     padding: 24px;
