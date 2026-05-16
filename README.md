@@ -11,8 +11,6 @@ Para facilitar a avaliação, você pode acessar o sistema com:
 > Senha: 123@abc  
 
 🔗 Acesse aqui: https://taskflow-web-mauve.vercel.app
-🔗 Backend API: https://web-production-564941.up.railway.app  
-
 ---
 
 ## 📸 Preview
