@@ -3,10 +3,14 @@
 Um sistema de gerenciamento de tarefas (To-Do List) com autenticação JWT, desenvolvido com **React + Django REST Framework**.
 
 ---
+## 🔐 Login de Demonstração
 
-## ✨ Demonstração
+Para facilitar a avaliação, você pode acessar o sistema com:
 
-🔗 Frontend: https://taskflow-web-mauve.vercel.app  
+> Usuário: user  
+> Senha: 123@abc  
+
+🔗 Acesse aqui: https://taskflow-web-mauve.vercel.app
 🔗 Backend API: https://web-production-564941.up.railway.app  
 
 ---
