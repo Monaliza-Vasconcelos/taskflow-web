@@ -694,21 +694,24 @@ html.dark .content_main img {
 
 
 @media (max-width: 480px) {
-  .form_container{
-    flex-direction: column;
-    align-items: start;
+  .login-box {
+    width: 90%;
+    padding: 24px;
+    border-radius: 12px;
   }
 
-  .label_input,
-  .label_input.description,
-  .label_input.status,
-  .label_input.title{
-    width: 100%;
+  .login-box h1 {
+    font-size: 22px;
   }
 
-  .item_filtros{
-    flex-direction: column;
-    gap:20px;
+  .login-box input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login-box button {
+    padding: 10px;
+    font-size: 14px;
   }
 }
 
