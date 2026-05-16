@@ -759,8 +759,16 @@ html.dark .content_main img {
   transition: 0.2s;
 }
 
+
+
 .login-box button:hover {
   background: #2563eb;
+}
+
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
