@@ -1,16 +1,80 @@
-# React + Vite
+### 📌 TaskFlow Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web do sistema TaskFlow, uma aplicação de gerenciamento de tarefas.
+Construído com React, este frontend consome uma API REST desenvolvida em Django + Django REST Framework, utilizando autenticação via JWT.
 
-Currently, two official plugins are available:
+### 🚀 Funcionalidades
+  🔐 Login e autenticação com JWT
+  👤 Controle de usuário autenticado
+  📋 Listagem de tarefas
+  ➕ Criação de tarefas
+  ✏️ Edição de tarefas
+  ❌ Remoção de tarefas
+  📊 Organização de tarefas por status
+  🌐 Consumo de API REST
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### 🧱 Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React
+JavaScript (ou TypeScript se usar)
+Axios
+React Router DOM
+Context API (ou Redux, se usar)
+JWT Authentication
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ⚙️ Instalação e execução
+```bash
+# clonar o repositório
+git clone git@github.com:Monaliza-Vasconcelos/taskflow-web.git
+
+# entrar na pasta
+cd taskflow-frontend
+
+# instalar dependências
+npm install
+
+# rodar o projeto
+npm run dev
+```
+
+---
+
+### 🔌 Configuração da API
+Crie um arquivo .env na raiz do projeto:
+```bash
+VITE_API_URL=http://localhost:8000
+```
+Ou no deploy:
+```bash
+VITE_API_URL=https://seu-backend.up.railway.app
+```
+
+---
+
+### 🔐 Autenticação
+O sistema utiliza JWT:
+/api/token/ → login
+access token → requisições
+refresh token → renovação automática
+
+---
+
+### 🌍 Backend
+
+Este frontend consome a API:
+
+👉 TaskFlow API (Django REST Framework)
+
+### 📌 Objetivo
+
+Criar um sistema completo de produtividade com autenticação, gerenciamento de tarefas e interface moderna.
+
+---
+
+### 🧠 Autor
+
+Desenvolvido por Monaliza Vasconcelos
