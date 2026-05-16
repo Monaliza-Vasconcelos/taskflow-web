@@ -13,7 +13,9 @@ Um sistema de gerenciamento de tarefas (To-Do List) com autenticação JWT, dese
 
 ## 📸 Preview
 
-![TaskFlow Preview](./preview.png)
+<p align="center">
+  <img src="./public/preview.png" width="900"/>
+</p>
 
 ---
 
