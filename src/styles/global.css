@@ -101,7 +101,7 @@ body {
 
 .header_container {
     width: 100%;
-    min-width: 480px;
+    min-width: 300px;
     min-height: 80px;
 
     display: flex;
@@ -229,7 +229,7 @@ html.dark .content_main img {
 .container_forms_principal{
     background-color: var(--color-text-background);
     width: 100%;
-    min-width: 350px;
+    min-width: 300px;
     padding: 20px;
     border: none;
     border-radius: 16px;
@@ -437,7 +437,7 @@ html.dark .content_main img {
 .item_filtros{
     display: flex;
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 10px 20px;
