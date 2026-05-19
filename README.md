@@ -57,7 +57,7 @@ Para facilitar a avaliação, você pode acessar o sistema com:
 ### 📦 Frontend
 
 ```bash
-git clone https://github.com/seu-usuario/taskflow-frontend.git
+git clone git@github.com:Monaliza-Vasconcelos/taskflow-web.git
 cd taskflow-frontend
 npm install
 npm run dev
@@ -76,7 +76,7 @@ VITE_API_URL=https://web-production-564941.up.railway.app
 ### 🖥️ Backend
 
 ```bash
-git clone https://github.com/seu-usuario/taskflow-backend.git
+git clone git@github.com:Monaliza-Vasconcelos/taskflow-api.git
 cd taskflow-backend
 pip install -r requirements.txt
 python manage.py migrate
