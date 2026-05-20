@@ -10,6 +10,7 @@ export default function Login() {
 
   // 🔥 SE JÁ ESTIVER LOGADO → SAI DO LOGIN
   useEffect(() => {
+    console.log("API URL:", import.meta.env.VITE_API_URL);
     const token = localStorage.getItem("access");
 
     if (token) {
