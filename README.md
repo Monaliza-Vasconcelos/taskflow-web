@@ -7,8 +7,8 @@ Um sistema de gerenciamento de tarefas (To-Do List) com autenticação JWT, dese
 
 Para facilitar a avaliação, você pode acessar o sistema com:
 
-> Usuário: user  
-> Senha: 123@abc  
+> Usuário: admin  
+> Senha: 12345678 
 
 🔗 Acesse aqui: https://taskflow-web-mauve.vercel.app
 ---
