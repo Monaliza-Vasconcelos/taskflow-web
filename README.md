@@ -58,7 +58,7 @@ Para facilitar a avaliação, você pode acessar o sistema com:
 
 ```bash
 git clone git@github.com:Monaliza-Vasconcelos/taskflow-web.git
-cd taskflow-frontend
+cd todo-list-frontend
 npm install
 npm run dev
 ```
@@ -68,7 +68,7 @@ npm run dev
 
 Crie um arquivo .env:
 ```bash
-VITE_API_URL=https://web-production-564941.up.railway.app
+VITE_API_URL=https://taskflow-api-gjdd.onrender.com
 ```
 
 ---
@@ -125,7 +125,7 @@ Controle de estado no React
 
 ### 🚀 Deploy
 Frontend: Vercel
-Backend: Railway
+Backend: Render
 
 ---
 
